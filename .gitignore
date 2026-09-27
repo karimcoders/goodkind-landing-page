@@ -1,0 +1,8 @@
+landing-private/
+*.sqlite3
+*.sqlite3-*
+*.csv
+.env
+.env.*
+__pycache__/
+*.pyc
