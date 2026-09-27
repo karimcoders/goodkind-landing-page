@@ -27,7 +27,7 @@ Open http://localhost:3000. `index.html` is self-contained: fonts, images, CSS a
 GitHub Pages publishes the static website from the root of the `main` branch.
 
 **The form backend is temporary and separate from GitHub Pages.** It currently uses:
-`https://donor-many-compression-urls.trycloudflare.com/api/enquiry`
+`https://mod-outcome-freight-impossible.trycloudflare.com/api/enquiry`
 
 The backend permits the GitHub Pages origin `https://karimcoders.github.io`. If the temporary backend or tunnel stops, the website still displays on GitHub Pages, but submitting the form will report that the service is unavailable. Email notifications are not connected.
 
@@ -45,3 +45,6 @@ Replace illustrative reviews with approved customer testimonials before commerci
 
 ## Client domain
 The client supplied `rareenterprisessolution.com`. At the time of this update it returned a Hostinger parked-domain page. This repository update does not change its DNS or hosting, and no custom-domain mapping has been configured. The GitHub Pages preview URL is retained to avoid breaking the existing shared link.
+
+## Bold typography update
+Hero text is now 102px / weight 700 on large desktop viewports. Main section headings use a 58–70px bold scale, feature titles 24–26px, and reading text 15–18px. Responsive overrides keep the layout within the viewport down to 320px. Branding, sections, imagery, cards and enquiry flow are unchanged.
