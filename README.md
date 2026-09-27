@@ -7,7 +7,7 @@ A single-page corporate gifting landing website, using the client-supplied RE em
 ## Current design
 - White base, deep indigo `#39317d`, warm gold `#a77a27`, pale indigo `#f0eef8`, and champagne `#faf5e9`.
 - Client-provided logo in the header, footer and favicon. Background removed without redrawing the mark.
-- Large mixed-weight hero typography, six-feature grid and two alternating image/accordion sections.
+- Oversized bold indigo/gold hero typography, six-feature grid and two alternating image/accordion sections.
 - Newly AI-generated gifting photography, not imagery copied from the reference website.
 - Two-card desktop / one-card mobile review carousel with arrows, dots, keyboard and touch controls.
 - Clearly labelled illustrative reviews and generated reviewer portraits, not verified endorsements.
@@ -27,7 +27,7 @@ Open http://localhost:3000. `index.html` is self-contained: fonts, images, CSS a
 GitHub Pages publishes the static website from the root of the `main` branch.
 
 **The form backend is temporary and separate from GitHub Pages.** It currently uses:
-`https://mod-outcome-freight-impossible.trycloudflare.com/api/enquiry`
+`https://tony-ryan-multimedia-becoming.trycloudflare.com/api/enquiry`
 
 The backend permits the GitHub Pages origin `https://karimcoders.github.io`. If the temporary backend or tunnel stops, the website still displays on GitHub Pages, but submitting the form will report that the service is unavailable. Email notifications are not connected.
 
@@ -58,3 +58,11 @@ Hero text is now 102px / weight 700 on large desktop viewports. Main section hea
 
 Repository: https://github.com/karimcoders/rare-enterprises
 Live page: https://karimcoders.github.io/rare-enterprises/
+
+## Logo-palette and category-strip update
+- All visible interface text now uses the RE logo’s indigo/gold palette, related accessible tones, or white contrast text. Black/charcoal text was removed from headings, body copy, forms and SVG badge labels.
+- Feature icons and badge placeholders now follow the same palette. Photography is unchanged.
+- A clean, reference-inspired row below the hero presents six gifting categories with original line icons: Employee Onboarding, Festive Gifting, Client Appreciation, Team Milestones, Branded Merchandise, and Events & Celebrations. These are category links, not client logos or endorsements.
+- Each category links to the enquiry form and prefills the occasion and interest; no checkout.
+- Indigo/gold decorative hero shapes, white space and bold type retained alongside the existing marquee and controlled animations.
+- Responsive layout verified at 14 widths from 320px to 1440px.
