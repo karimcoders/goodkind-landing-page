@@ -27,7 +27,7 @@ Open http://localhost:3000. `index.html` is self-contained: fonts, images, CSS a
 GitHub Pages publishes the static website from the root of the `main` branch.
 
 **The form backend is temporary and separate from GitHub Pages.** It currently uses:
-`https://cam-preventing-papers-lined.trycloudflare.com/api/enquiry`
+`https://extent-life-video-disabled.trycloudflare.com/api/enquiry`
 
 The backend permits the GitHub Pages origin `https://karimcoders.github.io`. If the temporary backend or tunnel stops, the website still displays on GitHub Pages, but submitting the form will report that the service is unavailable. Email notifications are not connected.
 
@@ -82,5 +82,10 @@ This revision supersedes the earlier no-black-paragraph direction: **all paragra
 - Fixed headline: **We make / every gift / Memorable.** (spelling corrected).
 - Main header/hero CTA: **GIFT HERE**. All text CTA buttons display uppercase; descriptive actions retain meaningful labels.
 - Right-hand hero: five image-only slides, comprising the original hamper and four newly generated indigo/gold gift photographs (technology, festive, executive desk and employee welcome kits). No extra image captions or rotating hero copy.
-- Five-second autoplay, previous/next controls, five selectors, pause/play, keyboard arrows and swipe; autoplay pauses on hover/focus, hidden browser tab or when the gallery is offscreen. Reduced-motion preferences disable autoplay/fades.
+- Three-second autoplay, previous/next controls, five selectors, pause/play, keyboard arrows and swipe; autoplay pauses on hover/focus, hidden browser tab or when the gallery is offscreen. Reduced-motion preferences disable autoplay/fades.
 - Black paragraphs, enquiry links, WhatsApp/call number and the other page sections are unchanged.
+
+## Latest interaction polish
+- WhatsApp button now uses recognizable brand green `#25D366` with the white WhatsApp mark (vector from Simple Icons: https://github.com/simple-icons/simple-icons/blob/develop/icons/whatsapp.svg). Contact number remains +91 84669 81603.
+- Gift icons added to 23 gifting-related CTAs, including header/hero GIFT HERE, collection/exploration links and enquiry submission. CTA labels remain uppercase. Navigation arrows and privacy acknowledgement controls retain their own appropriate symbols.
+- Five-image hero carousel now advances every **3 seconds**, verified by measuring a 3000 ms interval in the browser. Existing pause, manual controls, hover/focus/visibility safeguards and reduced-motion support remain.
