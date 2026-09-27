@@ -1,49 +1,39 @@
-# Goodkind — Corporate Gifting Landing Page
+# Goodkind — Indigo & Gold Corporate Gifting
 
-A clean, single-page Goodkind website with white, violet, lavender and apricot colours, oversized typography, newly AI-generated imagery, and an enquiry form.
+Live website: https://karimcoders.github.io/goodkind-landing-page/
 
-## Features
-- Goodkind branding throughout.
-- Reference-inspired homepage composition without a shopping cart, catalogue, account login, checkout or blog.
-- Responsive layout, navigation and six benefits.
-- Testimonials carousel with arrows, dots, keyboard navigation and mobile swipe.
-- Clearly labelled illustrative reviews and AI-generated portraits, not verified endorsements.
-- Enquiry form with server-side validation, private SQLite storage and a private CSV export.
-- No advertising trackers. Images, fonts, styles and JavaScript are embedded in `index.html`.
+A single-page corporate gifting landing website, using the client-supplied RE emblem with Goodkind branding. The layout follows the marketing-page composition of the supplied CorporateGift reference, without its ecommerce, blog, account or checkout features.
 
-## Hosting and enquiry service
-The HTML is deployed through GitHub Pages from the repository's default branch, at its root.
+## Current design
+- White base, deep indigo `#39317d`, warm gold `#a77a27`, pale indigo `#f0eef8`, and champagne `#faf5e9`.
+- Client-provided logo in the header, footer and favicon. Background removed without redrawing the mark.
+- Large mixed-weight hero typography, six-feature grid and two alternating image/accordion sections.
+- Newly AI-generated gifting photography, not imagery copied from the reference website.
+- Two-card desktop / one-card mobile review carousel with arrows, dots, keyboard and touch controls.
+- Clearly labelled illustrative reviews and generated reviewer portraits, not verified endorsements.
+- One enquiry form and a compact footer.
+- Responsive layout checked from 320px to 1440px.
 
-**Important:** GitHub Pages serves only the static landing page. The form currently calls a temporary Cloudflare-hosted Python API. Form submission depends on that temporary backend remaining online. Email notifications are not configured. Replace the enquiry endpoint with a permanently hosted backend before production use.
-
-Current temporary API origin: `https://casino-matter-scheduling-mortgage.trycloudflare.com`
-Allowed GitHub Pages form origin: `https://karimcoders.github.io`
-
-No GitHub credentials are stored in this repository, its website, or its form.
-
-## Local use
-With Python 3.10 or later:
+## Run locally
+Python 3.10+ is sufficient; no third-party Python libraries are required.
 
 ```sh
 python server.py
 ```
 
-Open http://localhost:3000. Only the homepage and API routes are publicly served by the Python server. Enquiries are stored in `landing-private/`, which is ignored by Git and is not served through the web server.
+Open http://localhost:3000. `index.html` is self-contained: fonts, images, CSS and JavaScript are embedded. The separately included `assets/brand-logo.png` and `assets/favicon.png` are editable branding source assets.
 
-The production GitHub Pages form uses the temporary API URL in the JavaScript at the end of `index.html`. On localhost, the form uses `/api/enquiry` from the local Python server.
+## GitHub Pages and form hosting
+GitHub Pages publishes the static website from the root of the `main` branch.
 
-## Theme
-The final style block contains the current theme overrides:
-- Primary violet: `#6045d8`
-- Text: `#242036`
-- Soft lavender: `#f0edff`
-- Secondary apricot: `#fff0e4`
+**The form backend is temporary and separate from GitHub Pages.** It currently uses:
+`https://began-backed-conferencing-stopping.trycloudflare.com/api/enquiry`
 
-The final CSS rules also define the responsive typography scale.
+The backend permits the GitHub Pages origin `https://karimcoders.github.io`. If the temporary backend or tunnel stops, the website still displays on GitHub Pages, but submitting the form will report that the service is unavailable. Email notifications are not connected.
 
-## Before production
-1. Replace illustrative reviews with approved real customer testimonials.
-2. Deploy the enquiry backend on persistent infrastructure and update the API URL and allowed CORS origin.
-3. Connect a recipient email or CRM, if required.
-4. Confirm privacy/retention requirements and keep the private enquiry directory out of public deployments.
-5. Remove the crawler restriction in `robots.txt` when ready for indexing.
+Before production use, deploy `server.py` to persistent hosting, update the API URL in `index.html`, confirm the CORS origin, and connect an email or CRM destination if needed.
+
+## Privacy and security
+Enquiries are stored in `landing-private/enquiries.sqlite3` and `landing-private/enquiries.csv` on the backend host. Those files are excluded from Git and are not served by the web application. No enquiry records, passwords or GitHub tokens are present in this repository.
+
+Replace illustrative reviews with approved customer testimonials before commercial use. The client-supplied logo remains the property of its owner. `robots.txt` currently discourages indexing of the prototype; update it when the production site is ready.
