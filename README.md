@@ -1,6 +1,6 @@
 # Rare Enterprises — Indigo & Gold Corporate Gifting
 
-Live website: https://karimcoders.github.io/goodkind-landing-page/
+Live website: https://karimcoders.github.io/rare-enterprises/
 
 A single-page corporate gifting landing website, using the client-supplied RE emblem with Rare Enterprises branding. The layout follows the marketing-page composition of the supplied CorporateGift reference, without a live ecommerce checkout, blog or user accounts. Collection tiles are enquiry links, not purchase flows.
 
@@ -44,7 +44,17 @@ Replace illustrative reviews with approved customer testimonials before commerci
 - “Our latest awards”: five visibly labelled placeholder badge slots. No G2 or other awards are claimed by Rare Enterprises. Replace these only with verified awards.
 
 ## Client domain
-The client supplied `rareenterprisessolution.com`. At the time of this update it returned a Hostinger parked-domain page. This repository update does not change its DNS or hosting, and no custom-domain mapping has been configured. The GitHub Pages preview URL is retained to avoid breaking the existing shared link.
+The client supplied `rareenterprisessolution.com`. At the time of this update it returned a Hostinger parked-domain page. This repository update does not change its DNS or hosting, and no custom-domain mapping has been configured. The repository and GitHub Pages project URL have been renamed to `rare-enterprises` at the client’s request. Use the new URL; old GitHub Pages links may no longer resolve.
 
 ## Bold typography update
 Hero text is now 102px / weight 700 on large desktop viewports. Main section headings use a 58–70px bold scale, feature titles 24–26px, and reading text 15–18px. Responsive overrides keep the layout within the viewport down to 320px. Branding, sections, imagery, cards and enquiry flow are unchanged.
+
+## Motion and interaction update
+- Continuous, seamless occasion marquee with pause/play, pause-on-hover and keyboard-focus pause.
+- One-time staggered scroll reveals, a subtle page-progress line and active section navigation.
+- Improved card and button hover effects plus a short hero entrance.
+- Reviews rotate every 6.5 seconds only while visible, and pause on interaction or a hidden browser tab. A dedicated control pauses automatic rotation.
+- Reduced-motion preferences disable nonessential animation and review autoplay.
+
+Repository: https://github.com/karimcoders/rare-enterprises
+Live page: https://karimcoders.github.io/rare-enterprises/
