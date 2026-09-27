@@ -27,7 +27,7 @@ Open http://localhost:3000. `index.html` is self-contained: fonts, images, CSS a
 GitHub Pages publishes the static website from the root of the `main` branch.
 
 **The form backend is temporary and separate from GitHub Pages.** It currently uses:
-`https://gather-ensures-extensive-jet.trycloudflare.com/api/enquiry`
+`https://cam-preventing-papers-lined.trycloudflare.com/api/enquiry`
 
 The backend permits the GitHub Pages origin `https://karimcoders.github.io`. If the temporary backend or tunnel stops, the website still displays on GitHub Pages, but submitting the form will report that the service is unavailable. Email notifications are not connected.
 
@@ -75,3 +75,12 @@ This revision supersedes the earlier no-black-paragraph direction: **all paragra
 - Accessible floating WhatsApp and call buttons, configured for the client-provided number **+91 84669 81603**. WhatsApp opens a prefilled enquiry in a new tab; telephone link uses `tel:+918466981603`. Opening WhatsApp does not send a message automatically.
 - Brand-coloured controls, hover/focus labels, reduced-motion support and 48px minimum mobile touch targets.
 - Existing gifting-category strip, collections, marquee, review carousel and enquiry flow preserved.
+
+## Current hero and brand update
+- Header/footer wordmark: **RARE ENTERPRISES**, with **Rare Enterprises Solution** directly below, left-aligned with the wordmark beside the RE emblem.
+- Hero eyebrow: **GIFT BETTER CONNECTIONS.**
+- Fixed headline: **We make / every gift / Memorable.** (spelling corrected).
+- Main header/hero CTA: **GIFT HERE**. All text CTA buttons display uppercase; descriptive actions retain meaningful labels.
+- Right-hand hero: five image-only slides, comprising the original hamper and four newly generated indigo/gold gift photographs (technology, festive, executive desk and employee welcome kits). No extra image captions or rotating hero copy.
+- Five-second autoplay, previous/next controls, five selectors, pause/play, keyboard arrows and swipe; autoplay pauses on hover/focus, hidden browser tab or when the gallery is offscreen. Reduced-motion preferences disable autoplay/fades.
+- Black paragraphs, enquiry links, WhatsApp/call number and the other page sections are unchanged.
