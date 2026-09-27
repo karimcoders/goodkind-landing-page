@@ -1,4 +1,4 @@
-"""Goodkind single-page website and private enquiry storage. Python standard library only."""
+"""Rare Enterprises single-page website and private enquiry storage. Python standard library only."""
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
 from datetime import datetime, timezone
@@ -21,7 +21,7 @@ with sqlite3.connect(DB) as con:
 os.chmod(DB,0o600)
 
 def save(data):
-    ref='GK-'+uuid.uuid4().hex[:10].upper()
+    ref='RE-'+uuid.uuid4().hex[:10].upper()
     values=[ref,datetime.now(timezone.utc).isoformat(),data['name'],data['company'],data['email'],data['occasion'],data['quantity'],data['budget'],data['notes']]
     with LOCK:
         with sqlite3.connect(DB) as con:
@@ -39,7 +39,7 @@ def save(data):
     return ref
 
 class Handler(BaseHTTPRequestHandler):
-    server_version='Goodkind/1.0'
+    server_version='RareEnterprises/1.0'
     def log_message(self,format,*args):
         # Do not log personal form values.
         super().log_message(format,*args)
@@ -71,7 +71,7 @@ class Handler(BaseHTTPRequestHandler):
         path=self.path.split('?',1)[0]
         if path in ['/','/index.html']:
             return self.respond(200,(SITE/'index.html').read_bytes(),'text/html; charset=utf-8',head)
-        if path=='/api/health':return self.respond(200,{'ok':True,'service':'goodkind'},head=head)
+        if path=='/api/health':return self.respond(200,{'ok':True,'service':'rare-enterprises'},head=head)
         if path=='/favicon.ico':return self.respond(204,b'','image/x-icon',head)
         if path=='/robots.txt':return self.respond(200,'User-agent: *\nDisallow: /\n','text/plain; charset=utf-8',head)
         return self.respond(404,{'error':'Not found'},head=head)
@@ -113,5 +113,5 @@ class Handler(BaseHTTPRequestHandler):
         return self.respond(201,{'ok':True,'reference':reference})
 
 if __name__=='__main__':
-    print('Goodkind website and enquiry form listening on 0.0.0.0:3000',flush=True)
+    print('Rare Enterprises website and enquiry form listening on 0.0.0.0:3000',flush=True)
     ThreadingHTTPServer(('0.0.0.0',3000),Handler).serve_forever()
