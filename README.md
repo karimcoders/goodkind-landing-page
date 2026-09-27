@@ -27,7 +27,7 @@ Open http://localhost:3000. `index.html` is self-contained: fonts, images, CSS a
 GitHub Pages publishes the static website from the root of the `main` branch.
 
 **The form backend is temporary and separate from GitHub Pages.** It currently uses:
-`https://tony-ryan-multimedia-becoming.trycloudflare.com/api/enquiry`
+`https://gather-ensures-extensive-jet.trycloudflare.com/api/enquiry`
 
 The backend permits the GitHub Pages origin `https://karimcoders.github.io`. If the temporary backend or tunnel stops, the website still displays on GitHub Pages, but submitting the form will report that the service is unavailable. Email notifications are not connected.
 
@@ -66,3 +66,12 @@ Live page: https://karimcoders.github.io/rare-enterprises/
 - Each category links to the enquiry form and prefills the occasion and interest; no checkout.
 - Indigo/gold decorative hero shapes, white space and bold type retained alongside the existing marquee and controlled animations.
 - Responsive layout verified at 14 widths from 320px to 1440px.
+
+## Latest client revision: contact buttons and typography
+This revision supersedes the earlier no-black-paragraph direction: **all paragraph copy is now black**, while headings, icons and controls retain the RE indigo/gold theme.
+- Hero eyebrow: “Gift for better connection”.
+- Header and hero primary CTAs: “Start gifting”, both targeting the enquiry form.
+- Hero heading line-height reduced to 0.92 on desktop and 0.94 on smaller screens, with reduced space above.
+- Accessible floating WhatsApp and call buttons, configured for the client-provided number **+91 84669 81603**. WhatsApp opens a prefilled enquiry in a new tab; telephone link uses `tel:+918466981603`. Opening WhatsApp does not send a message automatically.
+- Brand-coloured controls, hover/focus labels, reduced-motion support and 48px minimum mobile touch targets.
+- Existing gifting-category strip, collections, marquee, review carousel and enquiry flow preserved.
